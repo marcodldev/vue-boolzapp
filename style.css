@@ -40,6 +40,11 @@ body {
 }
 
 .ot {
-    height: 80%;
+    flex-grow: 2;
     background-image: url('./img/mine.jpg');
+}
+
+input.border {
+    width: 100%;
+    height: 34px;
 }
