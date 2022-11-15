@@ -8,9 +8,9 @@
 
 
 body {
-    background: rgb(0,168,132);
-    background: linear-gradient(0deg,  #dcdbd1 85% ,  rgb(	18, 140, 126) 10%);
-    }
+    background: rgb(0, 168, 132);
+    background: linear-gradient(0deg, #dcdbd1 85%, rgb(18, 140, 126) 10%);
+}
 
 
 .grey1 {
@@ -47,4 +47,19 @@ body {
 input.border {
     width: 100%;
     height: 34px;
+}
+
+.hsec1 {
+    height: calc(100% - 209px);
+    overflow: scroll;
+}
+
+.sent {
+    width: fit-content;
+    background-color: #d5f9ba;
+}
+
+.received {
+    width: fit-content;
+    background-color: white;
 }
