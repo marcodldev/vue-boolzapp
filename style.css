@@ -57,6 +57,7 @@ input.border {
 .sent {
     width: fit-content;
     background-color: #d5f9ba;
+    align-self: flex-end;
 }
 
 .received {
