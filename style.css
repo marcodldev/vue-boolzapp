@@ -11,12 +11,18 @@
     background-color: #eaeaea;
 }
 
+.icongrey {
+    color: #b1b1b1;
+    cursor: pointer;
+}
+
 .avatarCustomH {
     height: 60px;
 }
 
 .bgazure {
     background-color: #8edafc;
+    cursor: pointer;
 }
 
 .bellicon {
