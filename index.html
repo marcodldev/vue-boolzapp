@@ -65,10 +65,13 @@
                             </div>
                         </div>
 
-                        <!-- CONTATTI -->
+                       
 
                         <div class="d-flex flex-column  border-bottom d-block bg-white hsec1">
-                            <div class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
+
+                             <!-- CONTATTI -->
+
+                            <!-- <div class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <img src="./img/avatar_1.jpg" alt="user" class="avatarCustomH rounded-circle">
                                     <div class="">
@@ -80,15 +83,17 @@
                                 <div class="align-self-start">
                                     <h9>12:00</h9>
                                 </div>
-                            </div>
+                            </div> -->
 <!-- 
+
+    
                             CONTATTI CICLATI -->
 
                             <div v-for="(element,index) in contacts">
                                 <div
                                     class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <img :src="element.avatar" alt="user" class="avatarCustomH rounded-circle"> 
+                                        <img :src="(element.avatar)" alt="user" class="avatarCustomH rounded-circle"> 
                                         <div class="">
                                             <p class="m-0"> {{element.name}}</p> 
                                             <p class="m-0">Ultimo messaggio inviato</p>
