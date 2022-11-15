@@ -81,6 +81,26 @@
                                     <h9>12:00</h9>
                                 </div>
                             </div>
+<!-- 
+                            CONTATTI CICLATI -->
+
+                            <div v-for="(element,index) in contacts">
+                                <div
+                                    class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img :src="element.avatar" alt="user" class="avatarCustomH rounded-circle"> 
+                                        <div class="">
+                                            <p class="m-0"> {{element.name}}</p> 
+                                            <p class="m-0">Ultimo messaggio inviato</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="align-self-start">
+                                        <h9>12:00</h9>
+                                    </div>
+                                </div>
+                            </div>
+
 
 
 
