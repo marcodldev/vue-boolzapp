@@ -1,0 +1,28 @@
+.h-90 {
+    height: 90%;
+}
+
+.grad {
+    
+    background-image: linear-gradient(#009688 , #dcdbd1);
+}
+
+.grey1 {
+    background-color: #eaeaea;
+}
+
+.avatarCustomH {
+    height: 60px;
+}
+
+.bgazure {
+    background-color: #8edafc;
+}
+
+.bellicon {
+    width: 20px;
+}
+
+.belliconzure {
+    color: #8edafc;
+}
