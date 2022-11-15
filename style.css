@@ -2,6 +2,10 @@
     height: 90%;
 }
 
+.w-90 {
+    width: 90%;
+}
+
 
 body {
     background: rgb(0,168,132);
