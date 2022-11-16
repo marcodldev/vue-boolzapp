@@ -2,6 +2,7 @@ var app = new Vue({
   el: '#root',
   data: {
     indiceDin : 0,
+    nuovoText : '',
     contacts: [
       {
         name: 'Michele',
@@ -170,6 +171,16 @@ var app = new Vue({
     apriChat (element,index) {
       this.indiceDin = index;
 
+    },
+    aggiungiMex() {
+      this.contacts[this.indiceDin].messages.push({ date: '' , message: this.nuovoText, status: 'sent' });
+     
+      setInterval(this.autoMex, 2000);
+      
+    },
+    autoMex () {
+      this.contacts[this.indiceDin].messages.push({ date: '' , message: "ok!", status: 'received' });
+      
     }
   },
 

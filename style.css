@@ -65,3 +65,7 @@ input.border {
     background-color: white;
     align-self: flex-start;
 }
+
+.overflow {
+    overflow: scroll;
+}

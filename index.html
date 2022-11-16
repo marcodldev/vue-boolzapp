@@ -148,7 +148,7 @@
 
                         <!-- MAIN MESSAGES AREA  -->
 
-                        <div class="ot">
+                        <div class="ot overflow">
                             <div class="d-flex flex-column">                        
 
                                     <!-- CICLO MESSAGGI -->
@@ -169,7 +169,7 @@
                         <div class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
                             <i class="fa-regular fa-face-smile p-2"></i>
                             <div class="d-flex align-items-center w-90">
-                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" class="w-100">
+                                <input type="text" v-model="nuovoText" v-on:keyup.enter="aggiungiMex()" class="form-control" placeholder="Scrivi un messaggio" class="w-100">
                             </div>
 
                             <div class="">
