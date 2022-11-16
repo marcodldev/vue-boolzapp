@@ -60,7 +60,7 @@
 
                             <div class="p-2 d-flex align-items-center justify-content-between border-bottom bg-white">
                                 <i class="fa-solid fa-magnifying-glass p-2 icongrey bg-white border"></i>
-                                <input type="text" class="border " name="" id=""
+                                <input type="text" class="form-control" name="" id=""
                                     placeholder=" Cerca o inizia una nuova chat">
                             </div>
                         </div>
@@ -86,14 +86,14 @@
                             </div> -->
 <!-- 
 
-    
+
                             CONTATTI CICLATI -->
 
-                            <div v-for="(element,index) in contacts">
+                            <div v-for="(element,index) in contacts" @click="apriChat(element,index)">
                                 <div
                                     class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <img :src="(element.avatar)" alt="user" class="avatarCustomH rounded-circle"> 
+                                        <img :src="element.avatar" alt="user" class="avatarCustomH rounded-circle"> 
                                         <div class="">
                                             <p class="m-0"> {{element.name}}</p> 
                                             <p class="m-0">Ultimo messaggio inviato</p>
@@ -116,12 +116,22 @@
                     <div class="col-8 p-0 d-flex flex-column h-100">
 
                         <!-- CONTATTO CON CHAT APERTA -->
-
+<!-- 
                         <div class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
                             <div class="d-flex align-items-center">
                                 <img src="./img/avatar_1.jpg" alt="user" class="avatarCustomH rounded-circle">
                                 <div class="">
                                     <p class="m-0">Michele</p>
+                                    <p class="m-0">Ultimo accesso oggi alle 12:00</p>
+                                </div>
+                            </div> -->
+
+                            
+                        <div class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img :src="`${contacts[indiceDin].avatar}`" alt="user" class="avatarCustomH rounded-circle">
+                                <div class="">
+                                    <p class="m-0">{{ contacts[indiceDin].name}}</p>
                                     <p class="m-0">Ultimo accesso oggi alle 12:00</p>
                                 </div>
                             </div>
@@ -139,19 +149,15 @@
                         <!-- MAIN MESSAGES AREA  -->
 
                         <div class="ot">
-                            <div class="d-flex flex-column">
-                                <div class="d-flex sent rounded-3 m-3 p-3 align-items-end">
-                                    <p class="m-0">Hai portato a spasso il cane?</p>
-                                    <!-- <p class="m-0 fs-6 text-end">15:30</p> -->
+                            <div class="d-flex flex-column">                        
+
+                                    <!-- CICLO MESSAGGI -->
+
+                                <div v-for="(element,index) in contacts[indiceDin].messages" :class="(element.status  == 'sent') ? 'sent' : 'received' " class="d-flex sent rounded-3 m-3 p-3">
+                                    <p class="m-0">{{element.message}}</p>
                                 </div>
 
-                                <div class="d-flex sent rounded-3 m-3 p-3">
-                                    <p class="m-0">Ricordati di stendere i panni</p>
-                                </div>
 
-                                <div class="d-flex received rounded-3 m-3 p-3">
-                                    <p class="m-0">Tutto fatto!</p>
-                                </div>
                             </div>
 
 
@@ -163,7 +169,7 @@
                         <div class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
                             <i class="fa-regular fa-face-smile p-2"></i>
                             <div class="d-flex align-items-center w-90">
-                                <input type="text" placeholder="Scrivi un messaggio" class="w-100">
+                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" class="w-100">
                             </div>
 
                             <div class="">

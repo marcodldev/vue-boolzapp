@@ -63,4 +63,5 @@ input.border {
 .received {
     width: fit-content;
     background-color: white;
+    align-self: flex-start;
 }
