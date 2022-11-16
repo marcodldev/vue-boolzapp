@@ -175,7 +175,7 @@ var app = new Vue({
     aggiungiMex() {
       this.contacts[this.indiceDin].messages.push({ date: '' , message: this.nuovoText, status: 'sent' });
      
-      setInterval(this.autoMex, 2000);
+      setTimeout(this.autoMex, 2000);
       
     },
     autoMex () {
