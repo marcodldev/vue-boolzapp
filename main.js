@@ -177,7 +177,9 @@ var app = new Vue({
 
      //creare la data
 
-      this.contacts[this.indiceDin].messages.push({ date:'17/11/2022 13:22:00' , message: this.nuovoText, status: 'sent' });
+      dataJS = dayjs().minute();
+
+      this.contacts[this.indiceDin].messages.push({ date: dataJS , message: this.nuovoText, status: 'sent' });
      
       setTimeout(this.autoMex, 2000);
       
