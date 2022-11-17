@@ -177,31 +177,35 @@ var app = new Vue({
 
      //creare la data
 
-      dataJS = dayjs().minute();
+      dataJS = dayjs().format("DD/MM/YYYY H:mm:ss");
 
       this.contacts[this.indiceDin].messages.push({ date: dataJS , message: this.nuovoText, status: 'sent' });
      
       setTimeout(this.autoMex, 2000);
+
+
       
     },
     autoMex () {
-      this.contacts[this.indiceDin].messages.push({ date: '' , message: "ok!", status: 'received' });
+
+      dataJS = dayjs().format("DD/MM/YYYY H:mm:ss");
+      this.contacts[this.indiceDin].messages.push({ date: dataJS , message: "ok!", status: 'received' });
       
     },
-    ultimaOra (elem) {
-    let date = elem.date;
-    date = date.split (' ')
+     ultimaOra(element) {
+     let date = element.date;
+     date = date.split (' ')
 
-    return date [1] },
+     return date[1] },
 
-     ultimaOraContatti (elem) {
+    ultimaOraContatti(elem) {
 
       
-       let ultimaOraC = elem.messages[ elem.messages.length -1].date
-       ultimaOraC = ultimaOraC.split(' ')
+      let ultimaOraC = elem.messages[ elem.messages.length -1].date
+      ultimaOraC = ultimaOraC.split(' ')
 
-       return ultimaOraC[1]
-     },
+      return ultimaOraC[1]
+    },
      ultimoMex (element) {
 
       

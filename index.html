@@ -101,7 +101,7 @@
                                     </div>
 
                                     <div class="align-self-start">
-                                        <h6>{{ultimaOraContatti(element)}}</h6>
+                                        <h6>{{ultimaOraContatti(element)}}</h6> 
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
 
                                 <div v-for="(element,index) in contacts[indiceDin].messages" :class="(element.status  == 'sent') ? 'sent' : 'received' " class="d-flex sent rounded-3 m-3 p-3">
                                     <p class="m-0">{{element.message}}</p>
-                                    <p class="m-0">{{ultimaOra(element)}}</p>
+                                    <p class="m-0">{{ultimaOra(element)}}</p> 
                                 </div>
 
 
