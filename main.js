@@ -181,6 +181,37 @@ var app = new Vue({
     autoMex () {
       this.contacts[this.indiceDin].messages.push({ date: '' , message: "ok!", status: 'received' });
       
+    },
+    ultimaOra (elem) {
+    let date = elem.date;
+    date = date.split (' ')
+
+    return date [1] },
+
+     ultimaOraContatti (elem) {
+
+      
+       let ultimaOraC = elem.messages[ elem.messages.length -1].date
+       ultimaOraC = ultimaOraC.split(' ')
+
+       return ultimaOraC[1]
+     },
+    contactFilt () {
+      // names = this.contacts[this.indiceDin].name; 
+
+      // const result = names.includes(this.nuovoText);
+
+      this.contacts.forEach(element => {
+        let lower = element.name.toLowerCase();
+
+        let input = this.nuovoText.toLowerCase();
+        
+        if (lower.includes(input)) {
+          element.visible = true;
+        } else {
+          element.visible = false;
+        }
+      });
     }
   },
 
