@@ -3,6 +3,7 @@ var app = new Vue({
   data: {
     indiceDin : 0,
     nuovoText : '',
+    nuovoText2 : '',
     contacts: [
       {
         name: 'Michele',
@@ -173,7 +174,10 @@ var app = new Vue({
 
     },
     aggiungiMex() {
-      this.contacts[this.indiceDin].messages.push({ date: '' , message: this.nuovoText, status: 'sent' });
+
+     //creare la data
+
+      this.contacts[this.indiceDin].messages.push({ date:'17/11/2022 13:22:00' , message: this.nuovoText, status: 'sent' });
      
       setTimeout(this.autoMex, 2000);
       
@@ -196,6 +200,14 @@ var app = new Vue({
 
        return ultimaOraC[1]
      },
+     ultimoMex (element) {
+
+      
+      let ultimoMex = element.messages[ element.messages.length -1].message
+    
+
+      return ultimoMex
+    },
     contactFilt () {
       // names = this.contacts[this.indiceDin].name; 
 
@@ -204,7 +216,7 @@ var app = new Vue({
       this.contacts.forEach(element => {
         let lower = element.name.toLowerCase();
 
-        let input = this.nuovoText.toLowerCase();
+        let input = this.nuovoText2.toLowerCase();
         
         if (lower.includes(input)) {
           element.visible = true;

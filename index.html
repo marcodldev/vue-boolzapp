@@ -60,7 +60,7 @@
 
                             <div class="p-2 d-flex align-items-center justify-content-between border-bottom bg-white">
                                 <i class="fa-solid fa-magnifying-glass p-2 icongrey bg-white border"></i>
-                                <input type="text" v-model="nuovoText" v-on:keyup="contactFilt()" class="form-control" name="" id=""
+                                <input type="text" v-model="nuovoText2" v-on:keyup="contactFilt()" class="form-control" name="" id=""
                                     placeholder=" Cerca o inizia una nuova chat">
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                                         <img :src="element.avatar" alt="user" class="avatarCustomH rounded-circle"> 
                                         <div class="" >
                                             <p class="m-0"> {{element.name}}</p> 
-                                            <p class="m-0">Ultimo messaggio inviato</p>
+                                            <p class="m-0">{{ultimoMex(element)}}</p>
                                         </div>
                                     </div>
 
